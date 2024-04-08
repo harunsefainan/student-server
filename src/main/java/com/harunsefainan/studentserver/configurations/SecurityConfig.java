@@ -1,4 +1,4 @@
-package com.harunsefainan.studentserver.configs;
+package com.harunsefainan.studentserver.configurations;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
