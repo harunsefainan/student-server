@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Base64;
 
 @Component
 public class StudentServerUtil {
@@ -16,7 +15,7 @@ public class StudentServerUtil {
 
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    public static String generateOID() {
+    public synchronized String generateOID() {
         SecureRandom random = new SecureRandom();
         StringBuilder oidBuilder = new StringBuilder(OID_LENGTH);
 
