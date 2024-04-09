@@ -27,4 +27,6 @@ public class ResultMessages {
     static public String STUDENT_DELETE_SUCCESS = "Student deleted successfully.";
     static public String STUDENT_DELETE_FAILED = "There was an issue deleting the student.";
 
+    static public String STUDENT_NOT_FOUND = "Student not found.";
+
 }
