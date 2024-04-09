@@ -184,8 +184,8 @@ public class StudentServerController {
     }
 
     @DeleteMapping("/deleteStudent")
-    public Result DeleteStudent(HttpServletRequest request, @RequestParam String tcNo) {
-        StudentServerEntity existingStudent = iStudentServerRepository.findByTcNo(tcNo);
+    public Result DeleteStudent(HttpServletRequest request, @RequestParam String oid) {
+        StudentServerEntity existingStudent = iStudentServerRepository.getByOid(oid);
         if (existingStudent != null) {
             iStudentServerRepository.delete(existingStudent);
             Boolean logResult = logService.generateLog(

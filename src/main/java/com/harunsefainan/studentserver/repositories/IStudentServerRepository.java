@@ -9,4 +9,6 @@ public interface IStudentServerRepository extends JpaRepository<StudentServerEnt
 
     StudentServerEntity getByOid(String oid);
     StudentServerEntity findByTcNo(String tcNo);
+
+    StudentServerEntity findByOptime(String optime);
 }
