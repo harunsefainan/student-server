@@ -59,7 +59,7 @@ public class StudentServerController {
 
     @PostMapping("/newStudent")
     public Result NewStudent(HttpServletRequest request, @RequestBody StudentServerModel studentModel) {
-
+        System.out.println(util.generateOID().toString());
         StudentServerEntity student = new StudentServerEntity();
 
         student.setOid(util.generateOID().toString());
