@@ -12,8 +12,8 @@ public class UserDetailsConfig {
     @Bean
     public InMemoryUserDetailsManager userDetailsService() {
         UserDetails user1 = User
-                .withUsername("user1")
-                .password("{noop}" + "user1")
+                .withUsername("user")
+                .password("{noop}" + "user")
                 .roles("USER")
                 .build();
         // Other users work here
