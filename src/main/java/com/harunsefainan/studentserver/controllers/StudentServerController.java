@@ -56,7 +56,7 @@ public class StudentServerController {
 
     }
 
-    @GetMapping("/getByOID")
+    @GetMapping("/getByOID/{oid}")
     public DataResult<StudentServerEntity> GetByOID(HttpServletRequest request, String oid) {
 
         StudentServerEntity result = iStudentServerRepository.getByOid(oid);
@@ -183,7 +183,7 @@ public class StudentServerController {
         }
     }
 
-    @DeleteMapping("/deleteStudent")
+    @DeleteMapping("/deleteStudent/{oid}")
     public Result DeleteStudent(HttpServletRequest request, @RequestParam String oid) {
         StudentServerEntity existingStudent = iStudentServerRepository.getByOid(oid);
         if (existingStudent != null) {

@@ -1,7 +1,6 @@
 package com.harunsefainan.studentserver.services;
 
 import com.harunsefainan.studentserver.entities.StudentServerEntity;
-import com.harunsefainan.studentserver.models.StudentServerModel;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
