@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/v1/api/students")
@@ -133,4 +132,84 @@ public class StudentServerController {
         }
 
     }
+
+    @PutMapping("/updateStudent")
+    public Result UpdateStudent(HttpServletRequest request, @RequestBody StudentServerModel studentModel) {
+        StudentServerEntity existingStudent = iStudentServerRepository.findByTcNo(studentModel.getTcNo());
+        if (existingStudent != null) {
+            existingStudent.setFirstName(studentModel.getFirstName());
+            existingStudent.setLastName(studentModel.getLastName());
+            existingStudent.setBirthDate(studentModel.getBirthDate());
+            existingStudent.setCourseTime(studentModel.getCourseTime());
+            existingStudent.setRegistrationDate(studentModel.getRegistrationDate());
+            existingStudent.setOptime(new SimpleDateFormat("yyyyMMddHHmm").format(new Date()));
+
+            StudentServerEntity updatedStudent = iStudentServerRepository.save(existingStudent);
+
+            if (updatedStudent != null) {
+                Boolean logResult = logService.generateLog(
+                        UUID.randomUUID().toString(),
+                        "UpdateStudent",
+                        true,
+                        existingStudent,
+                        ResultMessages.STUDENT_UPDATE_SUCCESS
+                );
+                if (logResult)
+                    return new SuccessResult(ResultMessages.STUDENT_UPDATE_SUCCESS + ResultMessages.LOGGER_SUCCESS);
+                return new SuccessResult(ResultMessages.STUDENT_UPDATE_SUCCESS + ResultMessages.LOGGER_FAILED);
+            } else {
+                Boolean logResult = logService.generateLog(
+                        UUID.randomUUID().toString(),
+                        "UpdateStudent",
+                        false,
+                        existingStudent,
+                        ResultMessages.STUDENT_UPDATE_FAILED
+                );
+                if (logResult)
+                    return new ErrorResult(ResultMessages.STUDENT_UPDATE_FAILED + ResultMessages.LOGGER_SUCCESS);
+                return new ErrorResult(ResultMessages.STUDENT_UPDATE_FAILED + ResultMessages.LOGGER_FAILED);
+            }
+        } else {
+            Boolean logResult = logService.generateLog(
+                    UUID.randomUUID().toString(),
+                    "UpdateStudent",
+                    false,
+                    existingStudent,
+                    ResultMessages.STUDENT_NOT_FOUND
+            );
+            if (logResult)
+                return new ErrorResult(ResultMessages.STUDENT_NOT_FOUND + ResultMessages.LOGGER_SUCCESS);
+            return new ErrorResult(ResultMessages.STUDENT_NOT_FOUND + ResultMessages.LOGGER_FAILED);
+        }
+    }
+
+    @DeleteMapping("/deleteStudent")
+    public Result DeleteStudent(HttpServletRequest request, @RequestParam String tcNo) {
+        StudentServerEntity existingStudent = iStudentServerRepository.findByTcNo(tcNo);
+        if (existingStudent != null) {
+            iStudentServerRepository.delete(existingStudent);
+            Boolean logResult = logService.generateLog(
+                    UUID.randomUUID().toString(),
+                    "DeleteStudent",
+                    true,
+                    existingStudent,
+                    ResultMessages.STUDENT_DELETE_SUCCESS
+            );
+            if (logResult)
+                return new SuccessResult(ResultMessages.STUDENT_DELETE_SUCCESS + ResultMessages.LOGGER_SUCCESS);
+            return new SuccessResult(ResultMessages.STUDENT_DELETE_SUCCESS + ResultMessages.LOGGER_FAILED);
+        } else {
+            Boolean logResult = logService.generateLog(
+                    UUID.randomUUID().toString(),
+                    "DeleteStudent",
+                    false,
+                    null,
+                    ResultMessages.STUDENT_NOT_FOUND
+            );
+            if (logResult)
+                return new ErrorResult(ResultMessages.STUDENT_NOT_FOUND + ResultMessages.LOGGER_SUCCESS);
+            return new ErrorResult(ResultMessages.STUDENT_NOT_FOUND + ResultMessages.LOGGER_FAILED);
+        }
+    }
+
 }
