@@ -24,8 +24,8 @@ public class LogService {
     final Logger logger = LoggerFactory.getLogger(LogService.class);
 
     public Boolean generateLog(String uuid, String serviceName, Boolean success, String msj) {
-        logger.error(
-                logMsgFormatEx,
+        logger.info(
+                logMsgFormat,
                 uuid,
                 projectName,
                 serviceName,
@@ -35,16 +35,16 @@ public class LogService {
         return true;
     }
 
-    public Boolean generateLog(String uuid, StudentServerEntity user, String serviceName, Boolean success, String msj) {
+    public Boolean generateLog(String uuid, String serviceName, Boolean success, StudentServerEntity student, String msj) {
 
-        if (user != null) {
-            logger.error(
+        if (student != null) {
+            logger.info(
                     logMsgFormatEx,
                     uuid,
                     projectName,
-                    user,
                     serviceName,
                     success,
+                    student,
                     msj.replaceAll("\\r\\n|\\r|\\n", " ").trim()
             );
             return true;

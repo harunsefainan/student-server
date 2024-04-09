@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IStudentServerRepository extends JpaRepository<StudentServerEntity, String> {
 
-    IStudentServerRepository getByOid(String oid);
+    StudentServerEntity getByOid(String oid);
 }

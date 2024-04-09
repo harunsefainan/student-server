@@ -57,6 +57,39 @@ public class StudentServerController {
 
     }
 
+    @GetMapping("/getByOID")
+    public DataResult<StudentServerEntity> GetByOID(HttpServletRequest request, String oid) {
+
+        StudentServerEntity result = iStudentServerRepository.getByOid(oid);
+
+        if (result != null) {
+
+            Boolean logResult = logService.generateLog(
+                    UUID.randomUUID().toString(),
+                    "GetByOID",
+                    true,
+                    result,
+                    ResultMessages.LISTING_SUCCESS
+            );
+            if (logResult)
+                return new SuccessDataResult<>(result, ResultMessages.LISTING_SUCCESS + ResultMessages.LOGGER_SUCCESS);
+            return new SuccessDataResult<>(result, ResultMessages.LISTING_SUCCESS + ResultMessages.LOGGER_FAILED);
+
+        } else {
+            Boolean logResult = logService.generateLog(
+                    UUID.randomUUID().toString(),
+                    "GetByOID",
+                    false,
+                    result,
+                    ResultMessages.NOT_FOUND
+            );
+            if (logResult)
+                return new ErrorDataResult<>(ResultMessages.NOT_FOUND + ResultMessages.LOGGER_SUCCESS);
+            return new ErrorDataResult<>(ResultMessages.NOT_FOUND + ResultMessages.LOGGER_FAILED);
+        }
+
+    }
+
     @PostMapping("/newStudent")
     public Result NewStudent(HttpServletRequest request, @RequestBody StudentServerModel studentModel) {
         System.out.println(util.generateOID().toString());
@@ -80,6 +113,7 @@ public class StudentServerController {
                     UUID.randomUUID().toString(),
                     "NewStudent",
                     true,
+                    student,
                     ResultMessages.STUDENT_CREATE_SUCCESS
             );
             if (logResult)
@@ -90,6 +124,7 @@ public class StudentServerController {
                     UUID.randomUUID().toString(),
                     "NewStudent",
                     false,
+                    student,
                     ResultMessages.STUDENT_CREATE_FAILED
             );
             if (logResult)
