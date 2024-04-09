@@ -1,5 +1,6 @@
 package com.harunsefainan.studentserver.services;
 
+import com.harunsefainan.studentserver.entities.StudentServerEntity;
 import com.harunsefainan.studentserver.models.StudentServerModel;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class LogService {
         return true;
     }
 
-    public Boolean generateLog(StudentServerModel user, String uuid, String serviceName, Boolean success, String msj) {
+    public Boolean generateLog(String uuid, StudentServerEntity user, String serviceName, Boolean success, String msj) {
 
         if (user != null) {
             logger.error(
