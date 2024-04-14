@@ -1,171 +1,33 @@
-2024-04-11 01:21:22.929 [main] INFO  c.h.s.StudentServerApplication - Starting StudentServerApplication using Java 17.0.10 with PID 15728 (C:\Users\harun\Desktop\student-server\build\classes\java\main started by harun in C:\Users\harun\Desktop\student-server)
-2024-04-11 01:21:22.945 [main] INFO  c.h.s.StudentServerApplication - No active profile set, falling back to 1 default profile: "default"
-2024-04-11 01:21:24.150 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-11 01:21:24.230 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
-2024-04-11 01:21:25.240 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-04-11 01:21:25.256 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2024-04-11 01:21:25.264 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-04-11 01:21:25.264 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-04-11 01:21:25.426 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-04-11 01:21:25.426 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2395 ms
-2024-04-11 01:21:25.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-04-11 01:21:26.297 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3915e7c3
-2024-04-11 01:21:26.301 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-04-11 01:21:26.347 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-11 01:21:26.448 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-04-11 01:21:26.540 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-04-11 01:21:27.145 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-04-11 01:21:28.151 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-04-11 01:21:28.151 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-11 01:21:28.873 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-11 01:21:29.576 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@73973e77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54a5eff, org.springframework.security.web.context.SecurityContextHolderFilter@3b3dc752, org.springframework.security.web.header.HeaderWriterFilter@3c98eaa9, org.springframework.web.filter.CorsFilter@29612ee2, org.springframework.security.web.authentication.logout.LogoutFilter@64096a41, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47462daf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ad4ef13, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29280ca6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20524816, org.springframework.security.web.session.SessionManagementFilter@69c335c4, org.springframework.security.web.access.ExceptionTranslationFilter@2d732cda, org.springframework.security.web.access.intercept.AuthorizationFilter@7d50b4c4]
-2024-04-11 01:21:30.071 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2024-04-11 01:21:30.123 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2024-04-11 01:21:30.144 [main] INFO  c.h.s.StudentServerApplication - Started StudentServerApplication in 7.686 seconds (process running for 8.381)
-2024-04-11 01:22:27.096 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-04-11 01:22:27.098 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-04-11 01:22:27.099 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-04-11 01:22:27.494 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - d03da563-7960-4d78-a14c-4d0c46a3f6cf||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:22:37.787 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 293d6379-6bb4-4923-addd-7d5971c96847||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:00.551 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - f4a7c413-a456-49f6-b76e-10f4037deb85||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:01.732 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 41074e9c-a1c5-4b9e-aa1a-708d957c0b57||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:02.877 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 779ddb4c-8410-470f-841d-9f9250639669||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:04.055 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - e2bc809e-37a9-4471-a67d-fceb21070a7b||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:05.229 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 5f228c5b-d96b-46ee-9250-aab96048db53||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:06.394 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 16b3010c-7d8f-4e99-b752-1712135d897a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:07.558 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - d54d0d27-26a4-4756-aa64-e389d4664080||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:08.719 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - eaa9b8eb-645f-444a-8472-8b1fc9690511||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:09.856 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - f82b9258-c6e5-429a-9342-91503724e1af||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:10.997 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 6b80550c-2361-48b8-b446-10944b691135||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:12.169 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 0db594d7-9c50-404b-9550-436e73026038||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:13.296 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 49257627-724a-47cd-aa63-ad97191acaef||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:14.473 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 92286c89-3bb4-45ff-961c-854bd9eb3841||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:15.633 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 72e4aca6-1eee-4297-912e-ef885a0bd96b||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:16.779 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 9f93f703-e6b2-4971-ab20-d06d17e768ed||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:17.927 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 510a5f6f-da16-4fa9-a70c-4baeea9b0b65||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:19.101 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 4fdb1bc4-198a-4c89-a8ca-569a126cff56||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:20.268 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - b1b0c68e-a05c-447d-948d-0b5d4cfb5e6c||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:21.424 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - d29317d0-9584-454a-a2af-0af35e253d11||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:22.569 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 6329aeb9-05b2-4bf1-bcd4-c53c004fca8a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:23.708 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 5f8e5ac5-abff-4b17-8392-192e23f98870||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:24.843 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - b6ed0d9a-0499-424f-851f-c4dfe3b21d8b||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:25.976 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 6c1a96c5-0e77-4c49-bfc5-b02a825785aa||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:27.112 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 1f66788d-5d22-46a9-a8f2-d9f87e627a65||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:28.268 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 6e7b8924-4483-4963-b896-d93e7b84960c||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:29.430 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 8cb7c7e7-984e-4fb8-a6f3-32ad08af50a9||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:30.581 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 333deb9e-1864-433a-89a7-24d3d3bcb386||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:31.701 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 7b66bf20-84e6-4cbb-a853-4752df1050f7||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:32.844 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - afaa3b12-3f37-425d-b926-dcac8b187299||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:33.977 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 3f0ac2c1-57fd-446c-8821-c73a57499fb2||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:35.151 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - d5549fa5-fb5a-4832-8daf-15414ea40cd5||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:36.276 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - b8c603a0-c12a-4f46-9a43-ca7a2f8e3ec3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:37.425 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - cc4c7e5e-68ef-4876-8314-52258c4f4f87||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:38.579 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - fe467d38-fcc6-4127-b89a-eddd3cdf522f||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:39.703 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - d73c9129-2d93-48c7-8587-93eb98e9c504||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:40.853 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - cfd098b0-1510-42a9-9839-31fee8d19f4d||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:42.000 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - f3afee98-90dc-41e1-9a10-b8616fc11a84||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:43.133 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - adf5b474-6833-4467-b8b7-7ec0a4447628||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:44.278 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - d99cbad2-6164-46fc-91e7-51ede982c0b8||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:45.429 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - bc391788-d7c6-4e5f-9851-f00181fa1f29||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:46.569 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 8d389296-219c-4102-926f-f4d8977e6856||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:47.710 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 4ab774df-f333-4b63-b3cf-a66336295071||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:48.882 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - fe4bd2b8-c490-4a6b-92b8-95ba401ddfbc||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:50.042 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - ec1d1907-00d3-48e5-8e85-d22ab6564103||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:51.165 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 06d04523-bb39-475d-abdb-cc45ab073287||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:52.312 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 18926e82-f230-4ce0-96a4-214e669517dd||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:53.453 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 5c9d0024-ed50-4dba-a67d-7c6f7f5e8fb3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:54.588 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - dc40be7e-ccc3-40d4-aa55-df96b8f070db||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:55.745 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - efe1eb6c-c893-41f9-b614-20454045c9e6||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:56.898 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 7ab6008f-af41-4ac1-b80e-f3b15eb5e6c1||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:58.038 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - c0c023d6-9095-4b24-9956-de1ada48128c||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:23:59.172 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 0df996fb-156f-414b-b438-b6d242318429||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:00.312 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 544bf4d3-0728-4bf0-b055-55e3cc03db8f||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:01.442 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - d6035fa9-8291-47b9-a2ca-bcef9e42b8e3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:02.612 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - ba830074-3bbb-40d3-b310-a5b978691d08||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:03.747 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 9bde6126-65e9-4b7d-992d-0badf78b0b30||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:04.896 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - a3e71c61-2878-4d04-87ee-18dc28a32579||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:06.069 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 9e069f81-8a35-4fe6-8923-cc853528c567||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:24:40.103 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 475 ms
-2024-04-11 01:24:46.181 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - f4df39fe-81c6-4204-bd19-d5cfe6c305c5||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:01.215 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - e433d68d-ea47-4a6c-bbc4-ca2a488e6732||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:02.378 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - b1229478-2602-47e7-9026-de1a18b21c74||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:03.510 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - eaebf188-dbf6-4852-b874-1750cff614ef||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:04.647 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - d336b891-86f3-4b7b-aa92-3719ec6ef09a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:05.785 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 6c1e24ee-2b56-403c-9976-85875f37a627||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:26:06.963 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 7a44ef77-34ab-4820-b1fa-92dd911e9a7a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:08.930 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 5fd40be9-e45c-4a12-ac23-b200f813d5f8||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:10.052 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - b2f6e213-386c-469e-91ec-b32dfb1e9ade||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:11.198 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 4ba74a65-c48c-4f1e-98ce-b80943581bab||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:12.412 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - ee43e2d4-4002-490c-bfe1-9e08e3fec5a2||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:13.553 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - adf5fa69-775b-4db5-8d28-cbd878f0bdf1||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:27:14.718 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 4430f3c1-5bbb-438d-95db-1411beebbda6||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:14.075 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 7c749bc4-b23a-4a7d-bed8-70d844776c7f||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:15.302 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 0574257d-cf00-4e19-b3ba-3ae9e98312b6||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:16.464 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - a939b0f2-b2ed-4a5a-b6f4-439ed72a4781||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:17.642 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 57bc74bd-7619-4c0a-8c35-4ce300731818||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:18.802 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 1caa17e5-71c9-4296-a4b5-ec9d9009bca5||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:19.978 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 409e64cf-aa9f-45b4-a53a-de186a6e04a9||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:21.125 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - fdffc69f-558a-4e50-9734-0820f01ed302||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:22.256 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 5ecc56e2-d662-4e4f-97e1-588d1553ce94||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:23.416 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 677aa2f4-9449-4e97-acaa-e765afab1025||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:28:24.566 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - ecbaee75-281b-490b-a621-ed944d08c089||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:29:29.553 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 915b5001-140a-4a28-a41c-28e1a15a1f02||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:29:30.716 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 5e7d1d26-2d5c-4835-ba55-1cc3a69d76aa||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:29:31.837 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 8c45137b-bc89-4df4-b85d-7f7aa40aee28||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:29:32.958 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - b4eb01e5-0ab6-41cc-9f42-443d57147592||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:30:01.530 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 0838d946-4507-483b-a3b1-7389d98c9f72||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:30:02.730 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 1cff5ed8-d8f3-447c-9d05-1aab7c4bb481||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:30:03.920 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - d790257b-50af-41d1-b2e9-50d95aa62f2c||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:30:05.128 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 42a70888-d679-4346-91d2-13194b3467ef||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:31:02.266 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 6f1adb66-98be-4eb2-96c8-3da2e50aec9f||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:31:03.472 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - d91f9d42-3ac6-4026-8342-cde119246f8a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:31:04.613 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 89d19c71-bce3-426c-9cf3-7c2f9cff6279||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:31:05.787 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - f642ccc8-59ca-4bd0-8dea-691827c97988||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:31:06.907 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - e0c838cc-ac3b-4d8e-b2d1-84d7c430f457||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:24.581 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 291bcf0b-79bb-4cb3-b290-00663c7e8989||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:25.983 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 2625f2f9-6337-456f-8d20-5af97324b4ae||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:27.174 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - fe241757-a2d3-4bd2-824b-319493d19845||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:28.371 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 656fe6f5-2844-40ba-b208-c5c34d6b741d||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:29.619 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 14ccb77c-42d0-40dc-bbc3-fad1b701ca10||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:30.835 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - cc76aa64-3893-402a-91e0-80f9b33161d3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:32.067 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 39665479-dc69-4205-a60a-b97eb794fcea||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:33.300 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 27ea6b4b-4bfe-4e43-89de-932199df9459||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:34.531 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 0e956201-b5ee-4211-a3ae-2f93d6d33d1a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:35.749 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 81a216db-a92c-44fe-8602-56035d0378e9||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:36.955 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - fba690e7-f187-47aa-9b95-6f7834d51e59||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:38.226 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - a65cb8a2-4102-44e5-a33c-e09e7982e8d8||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:39.438 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 90125c1d-98a5-4e83-bb14-2a6903a4e964||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:40.679 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - f975f13b-5657-43f5-967d-5351f233005d||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:41.880 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - a83de043-9f21-4dee-bd04-c77189f9fec9||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:43.088 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 42139f84-d344-43f3-824f-1d45fd849b96||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:44.300 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 9c0badb0-9351-45b6-b4ea-4b653a11906a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:45.500 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 1ce85121-1661-4dda-928a-8b78e8782abf||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:46.739 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 869a0817-da61-48fa-845a-a4122facfa40||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:47.972 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 3ac1a00f-9be3-416c-9f4f-4cdc9ad69877||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:49.171 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 89f1c79b-d17b-4bf7-a64a-a44426a285eb||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:50.405 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 4cd6d1d2-375d-4bd4-aba0-fe9939a94a34||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:32:51.661 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - b24fef62-4e0d-47fc-abee-a2926ce323e3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:11.926 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 7c64a559-9280-4de5-ad66-f1ce01a9764d||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:13.109 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - b041eef2-ab14-4653-9540-89481e31f1de||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:14.255 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 08fea478-3089-4282-be64-917106172568||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:15.411 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - 0c6b39af-7e68-4d1f-83b0-718b41e51819||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:16.537 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 458f2a5f-4bbb-48cd-8445-610b0f623086||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:17.687 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 9ed44f09-4f5d-497e-a03d-f415cc17b52a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:47.522 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - c8326d9c-75d9-43af-bece-670a725cede7||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:48.949 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - ab14f31a-a476-4903-a477-1ddda6268032||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:50.126 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 4b58981f-4867-4258-a733-27a93a7b6070||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:51.337 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - ec11e546-7376-49c9-adcb-66e085e83c76||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:52.520 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 44874083-3a7b-497d-a48b-b5c3b6509706||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:35:53.674 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - a5733420-1373-4d6e-b4df-d1d648977203||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:30.060 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 5625a4ce-d51d-486e-8d84-1f6e31a4d22f||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:31.411 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - d06dc2ed-b985-4426-b039-a9ee69d953b3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:32.627 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - b0827589-0924-42fc-99c9-5caae912939a||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:33.887 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 64122957-6424-484d-a1cb-82ff85832416||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:35.084 [http-nio-8080-exec-5] INFO  c.h.s.services.LogService - 0d621651-62d6-4a6d-b996-d2f6c8dc50b2||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:36.343 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 0d354908-87fc-4fe1-980c-e82950e5e1f3||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:37.583 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - d808471f-ab93-4608-95fa-1096cd2e2a1c||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:38.771 [http-nio-8080-exec-9] INFO  c.h.s.services.LogService - 2a79bad7-54e3-42e8-8349-492334a47b6b||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:37:40.008 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - 3217c6ea-c408-4962-b4d9-887750650038||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:39:37.655 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - 43ae11fc-7b4b-4f17-9804-ab886a5096c9||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:39:48.015 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - f5186027-4765-45a7-b2f0-f8e376bee761||Student-Server||GetAll||true||Records listed successfully.
-2024-04-11 01:39:58.212 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - f4e607af-c975-4bee-9f97-ab2b3d424fc7||Student-Server||GetAll||true||Records listed successfully.
+2024-04-14 17:11:44.157 [main] INFO  c.h.s.StudentServerApplication - Starting StudentServerApplication using Java 17.0.10 with PID 30504 (C:\Users\harun\Desktop\student-server\build\classes\java\main started by harun in C:\Users\harun\Desktop\student-server)
+2024-04-14 17:11:44.160 [main] INFO  c.h.s.StudentServerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-14 17:11:45.012 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-14 17:11:45.059 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2024-04-14 17:11:45.548 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-14 17:11:45.548 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-14 17:11:45.564 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-14 17:11:45.564 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-14 17:11:45.624 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-14 17:11:45.625 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1405 ms
+2024-04-14 17:11:45.772 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-14 17:11:45.772 [main] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2024-04-14 17:11:46.115 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@221b77d7
+2024-04-14 17:11:46.115 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-14 17:11:46.160 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-14 17:11:46.223 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-14 17:11:46.270 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-14 17:11:46.553 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-14 17:11:47.377 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-14 17:11:47.377 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-14 17:11:47.752 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-14 17:11:48.021 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6aff157e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65fa1cd, org.springframework.security.web.context.SecurityContextHolderFilter@45fa7fb7, org.springframework.security.web.header.HeaderWriterFilter@3368cf02, org.springframework.web.filter.CorsFilter@106c73ed, org.springframework.security.web.authentication.logout.LogoutFilter@2c8f7d6a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4924ad09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bbf361a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46cb800b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cd1ee, org.springframework.security.web.session.SessionManagementFilter@32f8a37b, org.springframework.security.web.access.ExceptionTranslationFilter@5620470a, org.springframework.security.web.access.intercept.AuthorizationFilter@89dd102]
+2024-04-14 17:11:48.286 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-14 17:11:48.307 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-14 17:11:48.310 [main] INFO  c.h.s.StudentServerApplication - Started StudentServerApplication in 4.574 seconds (process running for 5.495)
+2024-04-14 17:12:38.388 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-14 17:12:38.388 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-14 17:12:38.388 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-14 17:12:47.608 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 224 ms
+2024-04-14 17:12:57.675 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 2e047801-6a07-4e5b-90c2-de680a8c7c19||Student-Server||GetAll||true||Records listed successfully.
+2024-04-14 17:13:34.842 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-14 17:13:34.857 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-14 17:13:34.873 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
