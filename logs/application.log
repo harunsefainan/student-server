@@ -520,3 +520,43 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2024-04-16 23:06:39.397 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-16 23:06:39.401 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-04-16 23:06:39.430 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-16 23:10:21.919 [main] INFO  c.h.s.StudentServerApplication - Starting StudentServerApplication using Java 17.0.10 with PID 21840 (C:\Users\harun\Desktop\student-server\build\classes\java\main started by harun in C:\Users\harun\Desktop\student-server)
+2024-04-16 23:10:21.923 [main] INFO  c.h.s.StudentServerApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-16 23:10:22.990 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-16 23:10:23.081 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2024-04-16 23:10:23.920 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-16 23:10:23.936 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-16 23:10:23.939 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-16 23:10:23.940 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-16 23:10:24.039 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-16 23:10:24.040 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2060 ms
+2024-04-16 23:10:24.260 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-16 23:10:24.901 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2755617b
+2024-04-16 23:10:24.904 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-16 23:10:24.956 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-16 23:10:25.030 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-16 23:10:25.082 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-16 23:10:25.418 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-16 23:10:26.590 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-16 23:10:26.595 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-16 23:10:27.617 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-16 23:10:28.144 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3da12ba4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64b0ec4a, org.springframework.security.web.context.SecurityContextHolderFilter@1483c738, org.springframework.security.web.header.HeaderWriterFilter@6c502018, org.springframework.web.filter.CorsFilter@1b949de4, org.springframework.security.web.authentication.logout.LogoutFilter@15096b0e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@98a0842, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ffcb1bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5be8a92c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2981064d, org.springframework.security.web.session.SessionManagementFilter@4d87e7f3, org.springframework.security.web.access.ExceptionTranslationFilter@2fb555e8, org.springframework.security.web.access.intercept.AuthorizationFilter@62b2bc2e]
+2024-04-16 23:10:28.510 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-16 23:10:28.528 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-16 23:10:28.546 [main] INFO  c.h.s.StudentServerApplication - Started StudentServerApplication in 7.151 seconds (process running for 8.124)
+2024-04-16 23:10:39.505 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-16 23:10:39.506 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-16 23:10:39.510 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-16 23:10:42.270 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 520 ms
+2024-04-16 23:11:25.151 [http-nio-8080-exec-10] INFO  c.h.s.services.LogService - fb42aec1-98b1-40d8-bcd3-192abc860b99||Student-Server||NewStudent||true||StudentServerEntity(oid=WPmFgA2mZ7Leio20240416231124960, firstName=deneme, lastName=deneme, tcNo=deneme, birthDate=deneme, registrationDate=deneme, courseTime=5, remainingDay=null, optime=202404162311)||Student created successfully.
+2024-04-16 23:11:36.419 [http-nio-8080-exec-1] INFO  c.h.s.services.LogService - 8fe3fdd8-4e2b-4eb8-9c88-2dafa7c7447d||Student-Server||GetAll||true||Records listed successfully.
+2024-04-16 23:12:28.759 [http-nio-8080-exec-7] INFO  c.h.s.services.LogService - 15b0c72a-19d0-459d-94f1-6f2c7924f288||Student-Server||GetAll||true||Records listed successfully.
+2024-04-16 23:12:43.308 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - 84692241-6d4e-4408-8197-4528ab3f135b||Student-Server||GetAll||true||Records listed successfully.
+2024-04-16 23:13:42.232 [http-nio-8080-exec-6] INFO  c.h.s.services.LogService - f2f95f97-bf7f-4fa8-91e8-c85a68d03c65||Student-Server||UpdateStudent||true||StudentServerEntity(oid=WPmFgA2mZ7Leio20240416231124960, firstName=string, lastName=string, tcNo=deneme, birthDate=string, registrationDate=string, courseTime=0, remainingDay=null, optime=202404162313)||Student updated successfully.
+2024-04-16 23:13:56.324 [http-nio-8080-exec-4] INFO  c.h.s.services.LogService - 0a295768-d268-4665-8072-894d9ca9fe9d||Student-Server||GetAll||true||Records listed successfully.
+2024-04-16 23:14:19.323 [http-nio-8080-exec-3] INFO  c.h.s.services.LogService - 13e85fbb-e98b-40b5-bfa5-b0c78ba484eb||Student-Server||GetByOID||true||StudentServerEntity(oid=My67mDDcOXBOJ820240409235915260, firstName=Ahmet, lastName=Durmaz, tcNo=69078963415, birthDate=15.09.1995, registrationDate=202403211558, courseTime=2, remainingDay=59d22h19m, optime=202404092359)||Record listed successfully.
+2024-04-16 23:14:52.030 [http-nio-8080-exec-2] INFO  c.h.s.services.LogService - d49e8f8b-2825-4fd1-9bb4-a550648aa0e0||Student-Server||DeleteStudent||true||StudentServerEntity(oid=WPmFgA2mZ7Leio20240416231124960, firstName=string, lastName=string, tcNo=deneme, birthDate=string, registrationDate=string, courseTime=0, remainingDay=null, optime=202404162313)||Student deleted successfully.
+2024-04-16 23:15:09.822 [http-nio-8080-exec-8] INFO  c.h.s.services.LogService - ef8ebc55-df10-4f2f-ad39-73a79daf4140||Student-Server||GetAll||true||Records listed successfully.
+2024-04-16 23:15:42.037 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-16 23:15:42.040 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-16 23:15:42.051 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

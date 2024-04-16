@@ -1,8 +1,8 @@
 -- Create student database
-CREATE DATABASE IF NOT EXISTS student_database;
+CREATE DATABASE IF NOT EXISTS student;
 
 -- Switch to the created database
-USE student_database;
+USE student;
 
 -- Create Student table
 CREATE TABLE IF NOT EXISTS student (
